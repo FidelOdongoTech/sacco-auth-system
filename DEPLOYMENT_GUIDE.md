@@ -192,13 +192,13 @@ CMD ["nginx", "-g", "daemon off;"]
 
 #### SSL/TLS (The Foundation of Trust)
 
-*   Always use valid SSL certificates. Let's Encrypt is a fantastic free option!
+*   have to use valid SSL certificates. Let's Encrypt is a fantastic free option!
 *   Set up HTTPS redirects to ensure all traffic is encrypted.
 *   Use secure headers (like the ones in the Nginx example) to protect against common attacks.
 
 #### Keycloak Security Best Practices
 
-*   **Change the default admin password!** This is the first thing you should do.
+*   **Change the default admin password!** muust do
 *   Consider enabling database encryption for an extra layer of protection.
 *   Configure reasonable session timeouts to reduce the risk of session hijacking.
 *   Set up regular backup procedures for your Keycloak database and configuration.
@@ -234,11 +234,11 @@ curl https://your-app-domain.com
 
 *   **Keycloak Logs**: You can find these in `/opt/keycloak/data/log/` inside your Keycloak container.
 *   **Application Logs**: Check your browser console for frontend errors and your web server logs for any server-side issues.
-*   **Security Events**: Keep an eye out for failed logins, token issues, and other security-related events in your Keycloak logs.
+*   **Security Events**: Keep an eye out for failed logins, token issues, and other security-related events in our Keycloak logs.
 
-## 🔧 Juggling Different Environments
+##  Juggling Different Environments
 
-It's a good practice to have separate configurations for your development, staging, and production environments. Here's how you can manage that in your `keycloak.config.ts` file:
+It's a good practice to have separate configurations for your development, staging, and production environments. Here's how we can manage that in our `keycloak.config.ts` file:
 
 ### For Development (Your Local Machine)
 
