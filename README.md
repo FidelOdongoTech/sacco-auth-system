@@ -1,39 +1,39 @@
-# Welcome to Your Sacco Debt Management System - Authentication & Authorization! 👋
+# Welcome to Your Sacco Debt Management System - Authentication & Authorization! 
 
 Hey there! This project is all about setting up a super secure and user-friendly authentication and authorization system for your Sacco Debt Management application. We're using some powerful tools here: **Keycloak** for handling all the identity magic, and **Angular** to build a slick frontend that ties it all together.
 
 Think of this as your ready-to-go foundation for managing who can access what in your Sacco system. We've baked in security, role-based access, and a clean code structure so you can hit the ground running!
 
-## 🏗️ Let's Talk Architecture
+## Architecture
 
 At its heart, this system has two main players:
 
 1.  **Keycloak Server**: This is our Identity and Access Management (IAM) powerhouse. It's where all your users, roles, and permissions live, making sure only the right people get in.
 2.  **Angular Frontend**: This is the beautiful Single Page Application (SPA) that your users will interact with. It's smartly integrated with Keycloak to handle logins, show user info, and protect different parts of your app.
 
-### ✨ What's Inside? (Key Features)
+###  What's Inside? (Key Features)
 
 We've packed this system with some awesome features to make your life easier and your app more secure:
 
-*   ✅ **Rock-Solid Authentication**: We're using industry-standard OAuth 2.0 / OpenID Connect through Keycloak. That's a fancy way of saying it's super secure!
-*   ✅ **Smart Role-Based Access Control**: We've set up three clear user roles right out of the box:
+*    **Rock-Solid Authentication**: We're using industry-standard OAuth 2.0 / OpenID Connect through Keycloak. That's a fancy way of saying it's super secure!
+*    **Smart Role-Based Access Control**: We've set up three clear user roles right out of the box:
     *   **Admin**: The boss! Full system access, user management, and all the bells and whistles.
     *   **Debt Officer**: Your go-to for debt management, customer records, and reporting.
     *   **External Agent**: For those who need limited access, perhaps for external service integrations.
-*   ✅ **Smooth JWT Token Management**: No need to worry about tokens expiring or refreshing. Keycloak handles all that automatically in the background.
-*   ✅ **Protected Routes**: Our Angular app uses clever 
+*    **Smooth JWT Token Management**: No need to worry about tokens expiring or refreshing. Keycloak handles all that automatically in the background.
+*    **Protected Routes**: Our Angular app uses clever 
 
 
 guards to make sure only users with the right roles can access specific parts of your application.
-*   ✅ **Production-Ready Code**: We believe in clean, scalable code. This project is structured to be easy to understand, maintain, and extend, with proper error handling built-in.
-*   ✅ **Responsive Design**: Your app will look great on any device, from a desktop monitor to a smartphone, thanks to its mobile-friendly design.
-*   ✅ **Docker-Friendly**: Getting Keycloak up and running is a breeze with the included Docker Compose setup. Less hassle, more coding!
+*    **Production-Ready Code**: We believe in clean, scalable code. This project is structured to be easy to understand, maintain, and extend, with proper error handling built-in.
+*    **Responsive Design**: Your app will look great on any device, from a desktop monitor to a smartphone, thanks to its mobile-friendly design.
+*    **Docker-Friendly**: Getting Keycloak up and running is a breeze with the included Docker Compose setup. Less hassle, more coding!
 
-## 🚀 Ready to Dive In? (Quick Start)
+##  Ready to Dive In? (Quick Start)
 
 Let's get this system up and running on your machine! Here's what you'll need and how to do it.
 
-### 🛠️ Prerequisites
+###  Prerequisites
 
 Before we begin, make sure you have these installed:
 
@@ -43,7 +43,7 @@ Before we begin, make sure you have these installed:
 
 ### 1. Fire Up Your Keycloak Server
 
-This is super easy with Docker! Just open your terminal and run this command:
+ open your terminal and run this command:
 
 ```bash
 # This command will get Keycloak running in the background, ready for action!
@@ -54,7 +54,7 @@ docker run -d --name keycloak \
   quay.io/keycloak/keycloak:latest start-dev
 ```
 
-### 2. A Little Keycloak Configuration Magic ✨
+### 2. A Little Keycloak Configuration Magic 
 
 Now that Keycloak is running, let's set up our realm and client. This is a one-time setup!
 
@@ -97,7 +97,7 @@ Or, if you're ready to prepare it for deployment, build it for production:
 ng build
 ```
 
-## 📁 Peeking Inside: Project Structure
+##  Peeking Inside: Project Structure
 
 We've kept things organized so you can easily find your way around. Here's a quick map of the project:
 
@@ -122,10 +122,10 @@ sacco-auth-app/
 │   │   └── app.config.ts        # The main configuration for your Angular app
 │   └── styles.scss              # Global styles to make everything look consistent
 ├── docker-compose.yml           # Your trusty Docker Compose file for Keycloak
-└── README.md                    # You're reading it! 😉
+└── README.md                    # You're reading it! 
 ```
 
-## 🔐 Security First! (Features Deep Dive)
+##  Security First! (Features Deep Dive)
 
 We've put a lot of thought into making this system secure and robust. Here's how it works under the hood:
 
@@ -154,7 +154,7 @@ We've defined clear roles to manage access effectively:
 *   **HTTP Interceptor**: This is a neat trick! It automatically adds the necessary Bearer token to all your API requests, so you don't have to manually add it every time.
 *   **Proper Logout Handling**: When a user logs out, we ensure all tokens and sessions are properly cleaned up, leaving no traces behind.
 
-## 🎨 A Look at the User Interface
+##  A Look at the User Interface
 
 We've designed the UI to be clean, intuitive, and user-friendly.
 
@@ -227,7 +227,7 @@ this.http.get('/api/protected-endpoint').subscribe(data => {
 });
 ```
 
-## 🚀 Ready for the Big Leagues? (Deployment)
+##  Ready for Deployment
 
 When you're ready to take your application live, here's how to prepare and deploy it.
 
@@ -340,7 +340,7 @@ initOptions: {
 }
 ```
 
-## 📚 Need More Info? (Additional Resources)
+##  Need More Info? (Additional Resources)
 
 Here are some helpful links if you want to dive deeper:
 
@@ -349,7 +349,7 @@ Here are some helpful links if you want to dive deeper:
 *   [Keycloak Angular Adapter](https://github.com/mauriciovigolo/keycloak-angular): The library that makes Keycloak and Angular play nicely together.
 *   [OAuth 2.0 / OpenID Connect](https://oauth.net/2/): Learn more about the security standards we're using.
 
-## 🤝 Got Questions? We're Here to Help!
+##  Got Questions? We're Here to Help!
 
 If you run into any snags or have questions about this implementation, here's a quick checklist:
 
@@ -363,7 +363,7 @@ This project is provided as a helpful starting point for your Sacco Debt Managem
 
 ---
 
-**Built with ❤️ for the Sacco Debt Management System**
+**Built for the Sacco Debt Management System**
 
 
 
