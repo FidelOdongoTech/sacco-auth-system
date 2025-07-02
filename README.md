@@ -67,7 +67,7 @@ Now that Keycloak is running, let's set up our realm and client. This is a one-t
     *   **Valid Redirect URIs**: `http://localhost:4200/*` (This tells Keycloak where to send users back after they log in)
     *   **Web Origins**: `http://localhost:4200` (This helps prevent pesky CORS issues)
 
-### 3. Get Your Angular App Spinning!
+### 3. Get Your Angular App Working
 
 Almost there! Let's get the frontend ready.
 
@@ -125,7 +125,7 @@ sacco-auth-app/
 └── README.md                    # You're reading it! 
 ```
 
-##  Security First! (Features Deep Dive)
+##  Security 
 
 We've put a lot of thought into making this system secure and robust. Here's how it works under the hood:
 
@@ -178,11 +178,11 @@ We've designed the UI to be clean, intuitive, and user-friendly.
 *   Provides information about the current user and their roles, which can be helpful for troubleshooting.
 *   Offers navigation options, like going back to the dashboard or logging out.
 
-## 🛠️ Getting Your Hands Dirty (Development)
+## Development
 
 Want to extend this project? Here are some common development tasks.
 
-### Adding New Routes (Easy Peasy!)
+### Adding New Routes 
 
 If you want to add a new page or feature that requires specific roles, it's super straightforward. Just update your `app.routes.ts` file like this:
 
@@ -243,7 +243,7 @@ ng build --configuration production
 # You can then serve these files using any standard web server.
 ```
 
-### Docker Deployment (Super Convenient!)
+### Docker Deployment
 
 If you prefer to deploy using Docker, the `docker-compose.yml` file I provided is a great starting point for Keycloak. For your Angular app, you'd typically build it and then serve the static files using a lightweight web server like Nginx within a Docker container.
 
@@ -255,7 +255,7 @@ docker-compose up -d
 # (like Netlify, Vercel, AWS S3, or an Nginx server in a Docker container).
 ```
 
-### Environment Configuration (Switching Gears)
+### Environment Configuration 
 
 It's common to have different settings for development, staging, and production environments. You'll primarily adjust the `src/app/keycloak.config.ts` file:
 
@@ -284,7 +284,7 @@ export const keycloakConfig: KeycloakConfig = {
 };
 ```
 
-## 🧪 Time to Test! (Making Sure Everything Works)
+## Testing
 
 Testing is crucial! Here's how you can verify that your authentication system is working perfectly.
 
@@ -306,9 +306,9 @@ Remember those roles we created in Keycloak? Now's the time to create some users
 4.  **Success!** You should be redirected back to the application's dashboard.
 5.  **Verify Role-Based Access**: Try navigating to different sections of the app. Do the Admin-only features show up for the Admin user? Does the Debt Officer see their specific tools? This is where you confirm your role guards are doing their job!
 
-## 🔧 Uh-Oh, Something's Not Right? (Troubleshooting)
+## Troubleshooting
 
-Don't worry, even the best systems have hiccups. Here are some common issues and how to tackle them.
+Here are some common issues and how to tackle them.
 
 ### Common Roadblocks
 
@@ -339,29 +339,6 @@ initOptions: {
   enableLogging: true // Flip this to 'true' to see detailed Keycloak logs in your browser console!
 }
 ```
-
-##  Need More Info? (Additional Resources)
-
-Here are some helpful links if you want to dive deeper:
-
-*   [Keycloak Documentation](https://www.keycloak.org/documentation): The official source for all things Keycloak.
-*   [Angular Documentation](https://angular.io/docs): Your guide to building amazing things with Angular.
-*   [Keycloak Angular Adapter](https://github.com/mauriciovigolo/keycloak-angular): The library that makes Keycloak and Angular play nicely together.
-*   [OAuth 2.0 / OpenID Connect](https://oauth.net/2/): Learn more about the security standards we're using.
-
-##  Got Questions? We're Here to Help!
-
-If you run into any snags or have questions about this implementation, here's a quick checklist:
-
-1.  Take a peek at the troubleshooting section above – your answer might be there!
-2.  Consult the official Keycloak and Angular documentation.
-3.  Double-check that your configuration settings match the setup guide.
-
-## 📄 License
-
-This project is provided as a helpful starting point for your Sacco Debt Management System. It's meant for educational and development purposes. Please make sure it aligns with your organization's security policies before deploying it to a live production environment.
-
----
 
 **Built for the Sacco Debt Management System**
 
