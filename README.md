@@ -1,4 +1,4 @@
-# Stima Sacco Debt Management System - Authentication & Authorization! 
+# Stima Sacco Debt Management System - Authentication & Authorization
 
 This is all about setting up a super secure and user-friendly authentication and authorization system for our Sacco Debt Management application. We're using some powerful tools here: **Keycloak** for handling all the identity magic, and **Angular** to build a slick frontend that ties it all together.
 
