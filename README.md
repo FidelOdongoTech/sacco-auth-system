@@ -1,19 +1,19 @@
 # Welcome to Your Sacco Debt Management System - Authentication & Authorization! 
 
-Hey there! This project is all about setting up a super secure and user-friendly authentication and authorization system for your Sacco Debt Management application. We're using some powerful tools here: **Keycloak** for handling all the identity magic, and **Angular** to build a slick frontend that ties it all together.
+This project is all about setting up a super secure and user-friendly authentication and authorization system for your Sacco Debt Management application. We're using some powerful tools here: **Keycloak** for handling all the identity magic, and **Angular** to build a slick frontend that ties it all together.
 
 Think of this as your ready-to-go foundation for managing who can access what in your Sacco system. We've baked in security, role-based access, and a clean code structure so you can hit the ground running!
 
 ## Architecture
 
-At its heart, this system has two main players:
+This system has two main players:
 
 1.  **Keycloak Server**: This is our Identity and Access Management (IAM) powerhouse. It's where all your users, roles, and permissions live, making sure only the right people get in.
 2.  **Angular Frontend**: This is the beautiful Single Page Application (SPA) that your users will interact with. It's smartly integrated with Keycloak to handle logins, show user info, and protect different parts of your app.
 
 ###  What's Inside? (Key Features)
 
-We've packed this system with some awesome features to make your life easier and your app more secure:
+I've packed this system with some awesome features to make your life easier and your app more secure:
 
 *    **Rock-Solid Authentication**: We're using industry-standard OAuth 2.0 / OpenID Connect through Keycloak. That's a fancy way of saying it's super secure!
 *    **Smart Role-Based Access Control**: We've set up three clear user roles right out of the box:
@@ -35,7 +35,7 @@ Let's get this system up and running on your machine! Here's what you'll need an
 
 ###  Prerequisites
 
-Before we begin, make sure you have these installed:
+Before I begin, make sure you have these installed:
 
 *   **Docker and Docker Compose**: For effortlessly spinning up the Keycloak server.
 *   **Node.js 18+ and npm**: The backbone for our Angular application.
