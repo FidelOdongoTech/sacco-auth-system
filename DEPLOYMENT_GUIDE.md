@@ -1,6 +1,5 @@
 # Your Go-Live Guide: Deploying the Sacco Authentication System 
 
-Alright, you've built an amazing authentication system, and now it's time to share it with the world! This guide will walk you through the steps to deploy your Keycloak server and Angular application to a production environment. Let's get started!
 
 ##  Step-by-Step to Production
 
