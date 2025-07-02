@@ -273,50 +273,6 @@ export const keycloakConfig: KeycloakConfig = {
 };
 ```
 
-## 📋 Your Pre-Flight Checklist
-
-Before you launch, run through this quick checklist to make sure you haven't missed anything:
-
-*   [ ] SSL certificates are configured and working.
-*   [ ] You have a solid database backup strategy in place.
-*   [ ] The default Keycloak admin password has been changed to something super secure.
-*   [ ] Your production realm is fully configured.
-*   [ ] Your client settings (redirect URIs, web origins) are correct.
-*   [ ] You've tested your user roles and permissions thoroughly.
-*   [ ] Your Angular app has been built for production.
-*   [ ] Your environment configurations are pointing to the right places.
-*   [ ] You've set up important security headers.
-*   [ ] You have a plan for monitoring and logging.
-*   [ ] Your health checks are working as expected.
-*   [ ] Your documentation is up-to-date.
-
-##  When Things Go Wrong (Troubleshooting)
-
-Even with the best planning, sometimes things don't go as expected. Here are some common production issues and how to fix them.
-
-### Common Production Hiccups
-
-*   **CORS Errors**: If you're seeing CORS errors in your browser console:
-    *   Double-check the "Web Origins" in your Keycloak client settings. Make sure it exactly matches your application's domain.
-    *   Verify your redirect URIs.
-    *   Ensure the protocol (HTTP vs. HTTPS) matches on both sides.
-
-*   **SSL Certificate Issues**:
-    *   Verify that your certificate chain is complete and correct.
-    *   Check that your certificate hasn't expired.
-    *   Make sure your domain configuration is pointing to the right certificate.
-
-*   **Database Connection Problems**:
-    *   Double-check your database credentials in your `docker-compose.yml` or Keycloak configuration.
-    *   Ensure your Keycloak container can reach your database server over the network.
-    *   Review your connection pool settings to make sure they're appropriate for your expected traffic.
-
-*   **Performance Slowdowns**:
-    *   Monitor your database performance for any slow queries.
-    *   Keep an eye on Keycloak's memory usage.
-    *   Review your session timeout settings – very long timeouts can sometimes impact performance.
-
-
 **Version**: 1.0.0
 
 
